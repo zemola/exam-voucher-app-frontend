@@ -2,12 +2,6 @@ const navbar = () => {
     return (  
         <nav className="navbar">
             <a className="logo">ExamApp</a>
-
-            <div className="search">
-                <form action="/">
-                    <input type="search" placeholder="Search" />
-                </form>
-            </div>
            
             <div className="links">
                 <a href="/">Home</a>
@@ -16,11 +10,12 @@ const navbar = () => {
 				<a href="/">Contact Us</a>
             </div>
 
-            <div>
-                <a href="/" className="btn">Sign In</a>
-                <a href="/" className="Cart">Cart</a>
+            <div className="search">
+                <form action="/">
+                    <input type="search" placeholder="Search" />
+                </form>
             </div>
-            
+
         </nav>
         
 
@@ -29,3 +24,5 @@ const navbar = () => {
 }
  
 export default navbar;
+
+
