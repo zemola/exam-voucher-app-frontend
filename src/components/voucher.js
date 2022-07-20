@@ -16,10 +16,10 @@ const Voucher = (props) => {
     <div className="voucher dib pa1 ma2 br3 tc shadow-3 grow">
   
           <div>
-            <Link to={`/vouchers/ ${props.id}`}>
+            <Link className="link" to={`/vouchers/ ${props.id}`}>
             <img className="image" src={props.image} alt='logo'/>
             <h2>{props.title}</h2>
-            <p>N{props.price}</p>
+            {/* <p>N{props.price}</p> */}
             {/* <p>{props.description}</p> */}
             </Link>
             <button onClick={handleDelete}>Delete</button>

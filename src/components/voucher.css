@@ -1,7 +1,22 @@
+.voucher {
+  height: 300px;
+  width: 300px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin: 2rem 10rem;
+  text-decoration: none;
+  color: rgb(47, 43, 66);
+}
+
 img {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
   width: 300px;
   height: 200px;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(25, 25, 44);
 }
