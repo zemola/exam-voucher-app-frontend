@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 
@@ -14,10 +15,12 @@ const Voucher = (props) => {
     <div className="voucher">
   
           <div>
+            <Link to={`/vouchers/ ${props.id}`}>
             <img src={props.image} alt='logo'/>
             <h2>{props.title}</h2>
             <p>N{props.price}</p>
             <p>{props.description}</p>
+            </Link>
             <button onClick={handleDelete}>Delete</button>
           </div>
      
