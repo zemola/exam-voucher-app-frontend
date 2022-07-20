@@ -1,10 +1,12 @@
-import VoucherList from "./voucherList";
+import Voucher from "./voucher";
+// import VoucherList from "./voucherList";
 
 
 
 const Home = () => {
   return ( <div>
-    <VoucherList />
+    {/* <VoucherList /> */}
+    < Voucher />
   </div> );
 }
  

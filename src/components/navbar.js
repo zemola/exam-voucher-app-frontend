@@ -1,7 +1,7 @@
 const navbar = () => {
     return (  
         <nav className="navbar">
-            <a className="logo">ExamApp</a>
+            <h2 className="logo">ExamApp</h2>
 
             <div className="search">
                 <form action="/">
@@ -11,14 +11,14 @@ const navbar = () => {
            
             <div className="links">
                 <a href="/">Home</a>
-				<a href="/">About Us</a>
-				<a href="/">Services</a>
-				<a href="/">Contact Us</a>
+				<a href="/about">About Us</a>
+				<a href="/services">Services</a>
+				<a href="/contact">Contact Us</a>
             </div>
 
             <div>
-                <a href="/" className="btn">Sign In</a>
-                <a href="/" className="Cart">Cart</a>
+                <a href="/sign-in" className="btn">Sign In</a>
+                <a href="/cart" className="Cart">Cart</a>
             </div>
             
         </nav>
