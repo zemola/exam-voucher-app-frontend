@@ -22,7 +22,7 @@ const VoucherList = () => {
 
  const everyVoucher = data.map(d => {
    return (
-     <Voucher title={d.title} price={d.price} descreption = {d.descreption} image = {d.image} id = {d._id} />
+     <Voucher title={d.title} price={d.price} description = {d.description} image = {d.image} id = {d._id} />
    )
  }) 
 

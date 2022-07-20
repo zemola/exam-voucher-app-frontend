@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import './voucher.css'
 
 
 
@@ -12,14 +13,14 @@ const Voucher = (props) => {
 
 
   return (
-    <div className="voucher">
+    <div className="voucher dib pa1 ma2 br3 tc shadow-3 grow">
   
           <div>
             <Link to={`/vouchers/ ${props.id}`}>
-            <img src={props.image} alt='logo'/>
+            <img className="image" src={props.image} alt='logo'/>
             <h2>{props.title}</h2>
             <p>N{props.price}</p>
-            <p>{props.description}</p>
+            {/* <p>{props.description}</p> */}
             </Link>
             <button onClick={handleDelete}>Delete</button>
           </div>

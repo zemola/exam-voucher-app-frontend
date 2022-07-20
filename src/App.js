@@ -3,6 +3,7 @@ import Navbar from './components/navbar';
 import Home from './components/home';
 import AddVoucher from './components/admin/AddVoucher';
 import VoucherDetails from './components/voucherDetails';
+import 'tachyons';
 // import Home from './Home';
 
 
