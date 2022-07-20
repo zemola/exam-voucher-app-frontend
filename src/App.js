@@ -1,17 +1,22 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Navbar from './components/navbar';
 import Home from './components/home';
 import AddVoucher from './components/admin/AddVoucher';
+import VoucherDetails from './components/voucherDetails';
 
 
 function App() {
   return (
+    <Router>
     <div className="App">
       <Navbar />
-      <Home />
-      <AddVoucher />
-        
-   
+      <Routes>
+      <Route path="/" element= {<Home />} />
+      <Route path="/create" element= {<AddVoucher/>} />
+      <Route path="/vouchers/:id" element= {<VoucherDetails />} />
+      </Routes>
     </div>
+    </Router>
   );
 }
 
