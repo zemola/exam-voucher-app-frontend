@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState } from "react";
 
 const AddVoucher = () => {
   const [title, setTitle] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
-  const [isPending, setIsPending] = useState(false)
 
   const url = 'http://localhost:8080/api/v1/voucher'
 
@@ -14,8 +12,14 @@ const AddVoucher = () => {
     e.preventDefault();
     const Voucher = {title, price, description, image }
 
-    setIsPending(true)
-    axios.post(url, {Voucher})
+    fetch(url, {
+      method: 'POST',
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(Voucher)
+    }).then(() => {
+      console.log("new log added");
+    })
+
    
   }
 
@@ -55,6 +59,7 @@ return (
       />
       
       <button>Add Voucher</button>
+    
     </form>
   </div>
  );

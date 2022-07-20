@@ -1,33 +1,26 @@
 
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-
-const Voucher = () => {
-
-  const url = 'http://localhost:8080/api/v1/voucher'
-  const [data, setData] = useState([])
 
 
-  useEffect(()=>{
-    axios.get(url)
-      .then(response => {
-        console.log(response);
-        setData(response.data.data.voucher)
-      })
-  }, [url])
+const Voucher = (props) => {
+
+  const handleDelete = () => {
+    fetch('http://localhost:8080/api/v1/voucher/'+ props.id, {
+      method: 'DELETE'
+    })
+}
+
 
   return (
     <div className="voucher">
-      {
-        data.map(d => (
+  
           <div>
-            <img src={d.image} alt='logo'/>
-            <h2>{d.title}</h2>
-            <p>N{d.price}</p>
-            <p>{d.description}</p>
+            <img src={props.image} alt='logo'/>
+            <h2>{props.title}</h2>
+            <p>N{props.price}</p>
+            <p>{props.description}</p>
+            <button onClick={handleDelete}>Delete</button>
           </div>
-        ))
-      }
+     
     </div>
   );
 };
