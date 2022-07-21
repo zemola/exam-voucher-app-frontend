@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom";
-import './voucher.css'
 
-
-
-const Voucher = (props) => {
+const DeleteVoucher = (props) => {
 
   const handleDelete = () => {
     fetch('http://localhost:8080/api/v1/voucher/'+ props.id, {
@@ -18,14 +15,13 @@ const Voucher = (props) => {
           <div>
             <Link className="link" to={`/vouchers/${props.id}`}>
             <img className="image" src={props.image} alt='logo'/>
-            <h2>{props.title}</h2>
-            {/* <p>N{props.price}</p> */}
-            {/* <p>{props.description}</p> */}
+            <h2>{props.title}</h2>/}
             </Link>
+            <button onClick={handleDelete}>Delete</button>
           </div>
      
     </div>
   );
 };
-
-export default Voucher;
+ 
+export default DeleteVoucher;

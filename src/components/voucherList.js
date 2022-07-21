@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import Voucher from "./voucher"
+import Voucher from "./voucher";
 
 const VoucherList = (props) => {
 

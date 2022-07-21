@@ -20,6 +20,8 @@ const VoucherDetails = () => {
    }, [url])
 
 
+
+
   return ( 
   <div className="voucher-details">
     <h2>Voucher Details</h2>

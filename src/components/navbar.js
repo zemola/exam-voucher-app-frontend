@@ -1,3 +1,5 @@
+
+
 const navbar = () => {
     return (  
         <nav className="navbar">
@@ -15,6 +17,8 @@ const navbar = () => {
                     <input type="search" placeholder="Search" />
                 </form>
             </div>
+
+
 
         </nav>
         
