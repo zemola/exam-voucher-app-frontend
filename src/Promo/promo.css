@@ -1,0 +1,22 @@
+/* promo */
+.promo{
+	position: relative;
+	width: 100%;
+	height: 70px;
+	background: rgb(170, 180, 240);
+	color: white;
+	display: flex;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+h1 {
+	font-size: 35px;
+	justify-items: center;
+	justify-content: space-between;
+}
+span {
+	text-transform: uppercase;
+	color: rgb(8, 15, 56);
+}
