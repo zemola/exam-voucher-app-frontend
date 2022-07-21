@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Voucher from "./voucher"
 
-const VoucherList = () => {
+const VoucherList = (props) => {
 
   const url = 'http://localhost:8080/api/v1/voucher'
   const [data, setData] = useState([])
@@ -18,11 +18,9 @@ const VoucherList = () => {
       })
   }, [url])
 
-
-
  const everyVoucher = data.map(d => {
    return (
-     <Voucher title={d.title} price={d.price} description = {d.description} image = {d.image} id = {d._id} />
+     <Voucher  title={d.title} price={d.price} description = {d.description} image = {d.image} id = {d._id}  key={d._id}/>
    )
  }) 
 

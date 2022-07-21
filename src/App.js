@@ -4,10 +4,10 @@ import Home from './components/home';
 import AddVoucher from './components/admin/AddVoucher';
 import VoucherDetails from './components/voucherDetails';
 import 'tachyons';
-// import Home from './Home';
 
 
 function App() {
+
   return (
     <Router>
     <div className="App">

@@ -1,0 +1,45 @@
+.voucher-details {
+  width: 100%;
+  height: 80vh;
+}
+
+.details {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  margin: 5% auto;
+  align-items: center;
+}
+
+.details-image {
+  width: 35%;
+  align-items: center;
+  margin-left: 5rem;
+}
+
+.write-up {
+  width: 75%;
+}
+
+.description,
+.price,
+.title {
+  padding-top: 1rem;
+}
+
+.description {
+  padding-right: 4rem;
+}
+
+.button {
+  margin-top: 5px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.button:hover {
+  background-color: rgb(13, 2, 61);
+  color: white;
+}
