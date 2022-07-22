@@ -1,11 +1,12 @@
-import React from 'react';
 import './navbar.css'
+import shopping from "../components/shopping-cart.png"
+import { Link } from 'react-router-dom';
 
 
 const navbar = () => {
     return (  
         <nav className="navbar">
-            <a className="logo">ExamApp <i class="fas fa-award"></i> </a>
+            <a href="/" className="logo">ExamApp <i class="fas fa-award"></i> </a>
            
             <div className="links">
                 <a href="/">Home</a>
@@ -19,8 +20,9 @@ const navbar = () => {
                     <input type="search" className='navsearch' placeholder="Search" />
                 </form>
             </div>
-
-
+            <Link to= "/cart">
+            <img className='cart-image' src={shopping} alt='cart'/>
+            </Link>
 
         </nav>
         
