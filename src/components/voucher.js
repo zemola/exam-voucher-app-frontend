@@ -13,8 +13,7 @@ const Voucher = (props) => {
 
 
   return (
-    <div className="voucher dib pa1 ma2 br3 tc shadow-3 grow">
-  
+    <div className="voucher pa2 ma2 br3 tc shadow-3 grow">
           <div>
             <Link className="link" to={`/vouchers/${props.id}`}>
             <img className="image" src={props.image} alt='logo'/>

@@ -1,0 +1,39 @@
+.footer{
+    background:  rgba(233, 229, 223, 0.945);
+}
+.logo2{
+	color:  rgb(10, 4, 49);
+	font-size: 50px;
+    text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+.footer .row {
+    color: rgb(10, 4, 49)!important;
+}
+.footer .row .col{
+    color: rgb(10, 4, 49)!important;
+    border-top: 2px solid rgb(10, 4, 49);
+}
+.footer .small{
+    color: rgb(10, 4, 49)!important;
+}
+.footer-link{
+    color: rgb(10, 4, 49)!important;
+    font-size: 13px;
+    transition: all .3s;
+    text-decoration: none;
+}
+.footer-link:hover{
+    color: rgb(170, 180, 240)!important;
+    text-decoration: none;
+}
+.footer .text-info{
+    color: rgb(10, 4, 49)!important;
+}
+.footer .btn{
+    background-color: rgb(10, 4, 49) !important;
+}
+.footer .fab:hover{
+    color: rgb(10, 4, 49) !important;  
+}

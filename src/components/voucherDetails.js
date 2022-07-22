@@ -3,7 +3,7 @@ import './voucherDetails.css'
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const VoucherDetails = () => {
+const VoucherDetails = ({handleClick}) => {
    const params = useParams();
 
    const url = `http://localhost:8080/api/v1/voucher/${params.id}`
@@ -24,7 +24,7 @@ const VoucherDetails = () => {
 
   return ( 
   <div className="voucher-details">
-    <h2>Voucher Details</h2>
+    {/* <h2>Voucher Details</h2> */}
     <div className="details br3 shadow-3">
     <div className="details-image">
     <img src={data.image} alt="voucher"></img> 
@@ -36,7 +36,7 @@ const VoucherDetails = () => {
      
      <p className="price">N{data.price}</p>
      <p className="description">{data.description}</p>
-    <button className="button">ADD TO CART</button>
+    <button className="button" handleClick={handleClick}>ADD TO CART</button>
     </div>
     </div>
   </div> );

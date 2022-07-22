@@ -1,15 +1,34 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import VoucherList from './components/voucherList'
-import Navbar from './components/navbar';
+import { useState } from "react";
 import AddVoucher from './components/admin/AddVoucher';
 import VoucherDetails from './components/voucherDetails';
-import 'tachyons';
 import Cart from "./components/Cart";
 import DeleteVoucher from "./components/admin/DeleteVouchers";
-
+import Navbar from './Navbar/navbar';
+import Footer from './Footer/footer';
+import 'tachyons';
+import Home from "./components/Home";
+ 
 
 
 function App() {
+
+  const [cart, setCart] = useState([]);
+
+  const handleClick = (item) => {
+    if (cart.indexOf(item) !== -1) return;
+    setCart([...cart, item]);
+    console.log(cart);
+  }
+
+  const handleChange = (item, d) => {
+    const ind = cart.indexOf(item);
+    const arr = cart;
+    arr[ind].amount += d;
+
+    if (arr[ind].amount === 0) arr[ind].amount = 1;
+    setCart([...arr]);
+  };
 
   
 
@@ -18,12 +37,14 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-      <Route path="/" element= {<VoucherList />} />
+      <Route path="/" element= {<Home />} />
       <Route path="/create" element= {<AddVoucher/>} />
-      <Route path="/vouchers/:id" element= {<VoucherDetails />} />
+      <Route path="/vouchers/:id" element= {<VoucherDetails handleClick={handleClick} />} />
       <Route path="/vouchers/delete" element= {<DeleteVoucher />} />
-      <Route path="/cart" element= {<Cart />} />
+      <Route path="/cart" element= {<Cart cart={cart} setCart={ setCart} handleChange={handleChange }/>} />
       </Routes>
+      <Footer />
+      
     </div>
     </Router>
   );

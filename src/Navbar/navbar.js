@@ -1,9 +1,11 @@
+import React from 'react';
+import './navbar.css'
 
 
 const navbar = () => {
     return (  
         <nav className="navbar">
-            <a href="/" className="logo">ExamApp</a>
+            <a className="logo">ExamApp <i class="fas fa-award"></i> </a>
            
             <div className="links">
                 <a href="/">Home</a>
@@ -14,7 +16,7 @@ const navbar = () => {
 
             <div className="search">
                 <form action="/">
-                    <input type="search" placeholder="Search" />
+                    <input type="search" className='navsearch' placeholder="Search" />
                 </form>
             </div>
 

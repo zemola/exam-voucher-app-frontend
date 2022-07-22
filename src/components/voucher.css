@@ -1,9 +1,6 @@
 .voucher {
   height: 300px;
   width: 300px;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  margin: 2rem 10rem;
   text-decoration: none;
   color: rgb(47, 43, 66);
 }

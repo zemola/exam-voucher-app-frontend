@@ -18,150 +18,15 @@ code {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
-/* Navbar */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 20px;
-  padding-left: 6%;
-  padding-right: 6%;
-  border-bottom: 2px solid #f2f2f2;
-}
-.navbar .logo {
-  color: rgb(10, 4, 49);
-  font-size: 35px;
-  cursor: pointer;
-}
-
-.navbar .search form {
-  background-color: rgb(10, 4, 49);
-  text-decoration: none;
-  border: 20px;
-  padding: 1px;
-  transition: transform 0.4s;
-}
-
-.navbar .link {
-  margin-left: auto;
-}
-.navbar a {
-  color: rgb(10, 4, 49);
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: capitalize;
-  list-style-type: none;
-  display: inline-block;
-  padding: 10px 25px;
-}
-.navbar a:hover {
-  color: rgb(75, 87, 155);
-  transition: 0.4s;
-}
-
-.search .navsearch {
-  width: 75%;
-  height: 50%;
-  color: rgb(8, 15, 56);
-  border-color: white;
-}
-
-/* .navbar .btn{
-	background-color: rgb(10, 4, 49);
-	color: white;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 10px 25px;
-	border-radius: 30px;
-	transition: transform .4s; 
-}
-.navbar .btn:hover{
-	transform: scale(1.2);
-  color:  white;
-  background-color:  rgb(75, 87, 155);
-} */
-
-/* promo */
-.promotext {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  background-color: rgb(170, 180, 240);
-  color: white;
-  height: 100px;
-  display: flex;
-  justify-items: center;
-  justify-content: space-between;
-  padding-top: 35px;
-  padding-left: 6%;
-  padding-right: 6%;
-}
-h1 {
-  font-size: 35px;
-  padding-left: 2%;
-  padding-right: 2%;
-}
-span {
-  text-transform: uppercase;
-  color: rgb(8, 15, 56);
-}
-.searchList {
-  width: 75%;
-  height: 50%;
-  color: rgb(8, 15, 56);
-  border-color: white;
-}
-.searchclick {
-  width: 25%;
-  height: 50%;
-  color: rgb(8, 15, 56);
-  border-color: white;
-}
-
-/* footer */
-.navfoot {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  background: rgb(155, 75, 75);
-  display: flex;
-  flex-direction: column;
-}
-/* .text{
-	background-color: rgb(170, 180, 240);
-	color: white;
-	height: 100px;
-	display: flex;
-	justify-items: center;
-	justify-content: space-between;
-	padding-top: 35px;
-	padding-left: 6%;
-	padding-right: 6%;
-} */
-/* h1 {
-	font-size: 35px;
-	padding-left: 2%;
-	padding-right: 2%;
-} */
-/* span {
-	text-transform: uppercase;
-	color: rgb(8, 15, 56);
-} */
-/* .searchList{
-	width: 75%;
-	height: 50%;
-	color: rgb(8, 15, 56);
-	border-color: white;
-} */
-/* .btn{
-	width: 75%;
-	height: 50%;
-	color: rgb(8, 15, 56);
-	border-color: white;
-} */
 
 .shopping-cart {
   height: 40px;
   width: 40px;
+}
+
+.voucher-content {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 300px;
+  margin: 2rem 10rem;
 }

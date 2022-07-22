@@ -27,7 +27,7 @@ const VoucherList = (props) => {
 
 
   return (
-    <div className="voucher">
+    <div className="voucher-content">
         {everyVoucher}
     </div>
   );
