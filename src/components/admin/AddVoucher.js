@@ -1,4 +1,6 @@
+import React from "react";
 import { useState } from "react";
+import './AddVoucher.css'
 
 const AddVoucher = () => {
   const [title, setTitle] = useState('');
@@ -25,42 +27,58 @@ const AddVoucher = () => {
 
 
 return ( 
-  <div>
-    <h2>
-    Add a New Blog
-    </h2>
-    <form onSubmit={handleSubmit}>
-      <label>Voucher title:</label>
-      <input type="text"
-        required
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
+  <div className="addvoucher">
+    <div className="sub-addvoucher">
+      <div>
+        <form onSubmit={handleSubmit} className="contact-form">
+        <h2 className="addvoucher-text">
+          Add a New Voucher
+        </h2>
+          <div className="form-group">
+          <label className="fill-form">Voucher title:</label>
+              <input type="text"
+                required
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+              />
+          </div>
 
-<label>Voucher price:</label>
-      <input type="text"
-        required
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-      />
+          <div class="form-group">
+          <label className="fill-form"> price:</label>
+                <input type="text"
+                  required
+                  value={price}
+                  onChange={(e) => setPrice(e.target.value)}
+                />
+          </div>
 
-<label>Voucher description:</label>
-      <input type="text"
-        required
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      />
+          <div class="form-group">
+          <label className="fill-form"> description:</label>
+                <input type="text"
+                  required
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                />
+          </div>
 
-<label>Voucher image:</label>
-      <input type="text"
-        required
-        value={image}
-        onChange={(e) => setImage(e.target.value)}
-      />
+          <div class="form-group">
+          <label className="fill-form"> image (url):</label>
+                <input type="text"
+                  required
+                  value={image}
+                  onChange={(e) => setImage(e.target.value)}
+                />
+          </div>
+
+          {/* <button className="btn">Add Voucher</button> */}
+        </form>
+
+        <a class="btn" href="#">Add Voucher</a>
+
+      </div>
       
-      <button>Add Voucher</button>
-    
-    </form>
+      
+    </div>
   </div>
  );
 }

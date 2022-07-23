@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import './voucher.css'
 
@@ -5,11 +6,11 @@ import './voucher.css'
 
 const Voucher = (props) => {
 
-  const handleDelete = () => {
-    fetch('http://localhost:8080/api/v1/voucher/'+ props.id, {
-      method: 'DELETE'
-    })
-}
+//   const handleDelete = () => {
+//     fetch('http://localhost:8080/api/v1/voucher/'+ props.id, {
+//       method: 'DELETE'
+//     })
+// }
 
 
   return (
