@@ -36,3 +36,25 @@ code {
   margin: 2rem;
   align-items: center;
 }
+
+.delete-voucher{
+  padding: 8px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(13, 2, 61);
+  color: white;
+  font-size: 20px;
+  width: 80px;
+}
+
+.delete-voucher:hover {
+  background-color: rgb(75, 87, 155);
+  color: rgb(13, 2, 61);
+}
+
+.voucher-link{
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(13, 2, 61);
+}

@@ -47,11 +47,11 @@ const Footer = () => {
                         <h5 className="pb-3">Stay Connected</h5>
                         <p className="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius maxime provident amet minima? Error, facere fugiat. Quos impedit, tempore eius rerum quis.</p>
                         <ul className="list-inline">
+                            <li className="list-inline-item"><i className="fab fa-google-plus fa-2x text-danger"></i></li>
                             <li className="list-inline-item"><i className="fab fa-facebook fa-2x text-primary"></i></li>
                             <li className="list-inline-item"><i className="fab fa-instagram fa-2x text-danger"></i></li>
-                            <li className="list-inline-item"><i className="fab fa-youtube fa-2x text-danger"></i></li>
                             <li className="list-inline-item"><i className="fab fa-twitter fa-2x text-primary"></i></li>
-                            <li className="list-inline-item"><i className="fab fa-google-plus fa-2x text-danger"></i></li>
+                            <li className="list-inline-item"><i className="fab fa-youtube fa-2x text-danger"></i></li>
                         </ul>
                     </div>
                 </div>

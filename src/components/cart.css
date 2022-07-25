@@ -1,12 +1,16 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
-}
+} */
 
 article {
   width: 60%;
+  height: 60vh;
   margin: auto;
+  margin-bottom: 50px;
+  margin-top: 100px;	
 }
+
 
 .cart_box img {
   width: 50px;

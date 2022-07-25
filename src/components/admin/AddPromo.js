@@ -42,7 +42,7 @@ return (
               />
           </div>
 
-          <div class="form-group">
+          <div className="form-group">
           <label className="fill-form"> percentage:</label>
                 <input type="text"
                   required
@@ -51,7 +51,7 @@ return (
                 />
           </div>
 
-          <div class="form-group">
+          <div className="form-group">
           <label className="fill-form"> vouchers:</label>
                 <input type="text"
                   required
@@ -63,7 +63,7 @@ return (
           {/* <button className="btn">Add Voucher</button> */}
         </form>
 
-        <a class="btn" href="#">Add Voucher</a>
+        <a className="btn" href="#">Add Voucher</a>
 
       </div>
       
