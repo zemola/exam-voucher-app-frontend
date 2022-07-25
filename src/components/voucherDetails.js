@@ -39,7 +39,7 @@ const VoucherDetails = ({ handleClick }) => {
      
      <p className="price">N{data.price}</p>
      <p className="description">{data.description}</p>
-    <Button className="button" onClick={() => handleClick(data)}>ADD TO CART </Button>
+    <button className="button" onClick={() => handleClick(data)}>ADD TO CART </button>
     </div>
     </div>
   </div> );
