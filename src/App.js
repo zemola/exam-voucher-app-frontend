@@ -1,3 +1,4 @@
+import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { useState } from "react";
 import Admin from "./components/admin/admin";

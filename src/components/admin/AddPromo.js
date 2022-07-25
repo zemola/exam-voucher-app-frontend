@@ -2,22 +2,21 @@ import React from "react";
 import { useState } from "react";
 import './AddVoucher.css'
 
-const AddVoucher = () => {
+const AddPromo = () => {
   const [title, setTitle] = useState('');
-  const [price, setPrice] = useState('');
-  const [description, setDescription] = useState('');
-  const [image, setImage] = useState('');
+  const [percentage, setpercentage] = useState('');
+  const [vouchers, setVouchers] = useState('');
 
-  const url = 'http://localhost:8080/api/v1/voucher'
+  const url = 'http://localhost:8080/api/v1/promo'
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const Voucher = {title, price, description, image }
+    const Promo = {title, percentage, Promos, }
 
     fetch(url, {
       method: 'POST',
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify(Voucher)
+      body: JSON.stringify(Promo)
     }).then(() => {
       console.log("new log added");
     })
@@ -43,37 +42,28 @@ return (
               />
           </div>
 
-          <div className="form-group">
-          <label className="fill-form"> price:</label>
+          <div class="form-group">
+          <label className="fill-form"> percentage:</label>
                 <input type="text"
                   required
-                  value={price}
-                  onChange={(e) => setPrice(e.target.value)}
+                  value={percentage}
+                  onChange={(e) => setpercentage(e.target.value)}
                 />
           </div>
 
-          <div className="form-group">
-          <label className="fill-form"> description:</label>
+          <div class="form-group">
+          <label className="fill-form"> vouchers:</label>
                 <input type="text"
                   required
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                />
-          </div>
-
-          <div className="form-group">
-          <label className="fill-form"> image (url):</label>
-                <input type="text"
-                  required
-                  value={image}
-                  onChange={(e) => setImage(e.target.value)}
+                  value={vouchers}
+                  onChange={(e) => setVouchers(e.target.value)}
                 />
           </div>
 
           {/* <button className="btn">Add Voucher</button> */}
         </form>
 
-        <a className="btn" href="#">Add Voucher</a>
+        <a class="btn" href="#">Add Voucher</a>
 
       </div>
       

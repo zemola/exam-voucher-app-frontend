@@ -2,7 +2,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import AdminInterface from "./adminInterface";
-import { Navigate } from "react-router-dom";
 
 const Admin = () => {
   const url = "http://localhost:8080/api/v1/voucher";

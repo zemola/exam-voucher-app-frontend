@@ -1,4 +1,6 @@
+import React from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './voucherDetails.css'
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -26,6 +28,7 @@ const VoucherDetails = ({ handleClick }) => {
   <div className="voucher-details">
     {/* <h2>Voucher Details</h2> */}
     <div className="details br3 shadow-3">
+    <Link to="/" className="btn btn-primary">x</Link>
     <div className="details-image">
     <img src={data.image} alt="voucher"></img> 
     </div>
