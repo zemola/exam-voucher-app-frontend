@@ -2,14 +2,14 @@ import { useParams } from "react-router-dom";
 import './voucherDetails.css'
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Button } from "style-components";
 
-const VoucherDetails = ({handleClick}) => {
+const VoucherDetails = ({ handleClick }) => {
+
    const params = useParams();
 
    const url = `http://localhost:8080/api/v1/voucher/${params.id}`
-   const [data, setData] = useState([])
- 
- 
+   const [data, setData] = useState([]) 
  
    useEffect(()=>{
      axios.get(url)
@@ -18,7 +18,7 @@ const VoucherDetails = ({handleClick}) => {
          setData(response.data.data)
        })
    }, [url])
-
+ 
 
 
 
@@ -36,7 +36,7 @@ const VoucherDetails = ({handleClick}) => {
      
      <p className="price">N{data.price}</p>
      <p className="description">{data.description}</p>
-    <button className="button" handleClick={handleClick}>ADD TO CART</button>
+    <Button className="button" onClick={() => handleClick(data)}>ADD TO CART </Button>
     </div>
     </div>
   </div> );

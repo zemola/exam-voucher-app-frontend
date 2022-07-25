@@ -3,7 +3,8 @@ import shopping from "../components/shopping-cart.png"
 import { Link } from 'react-router-dom';
 
 
-const navbar = () => {
+const Navbar = ({ setShow, size }) => {
+
     return (  
         <nav className="navbar">
             <a href="/" className="logo">ExamApp <i class="fas fa-award"></i> </a>
@@ -21,7 +22,7 @@ const navbar = () => {
                 </form>
             </div>
             <Link to= "/cart">
-            <img className='cart-image' src={shopping} alt='cart'/>
+            <img className='cart-image' src={shopping} alt='cart'/><span>{size}</span>
             </Link>
 
         </nav>
@@ -31,6 +32,6 @@ const navbar = () => {
     );
 }
  
-export default navbar;
+export default Navbar;
 
 

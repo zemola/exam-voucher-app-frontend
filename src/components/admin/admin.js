@@ -1,5 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import AdminInterface from "./adminInterface";
+import { Navigate } from "react-router-dom";
 
 const Admin = () => {
   const url = "http://localhost:8080/api/v1/voucher";
@@ -12,25 +15,33 @@ const Admin = () => {
     });
   }, [url]);
 
-  const handleDelete = () => {
-    fetch('http://localhost:8080/api/v1/voucher/'+ props.id, {
-      method: 'DELETE'
-    })
-}
-
-  data.map((d) => {
+  const handleData = data.map((d) => {
     return (
-      <div className="voucher-content">
-        <div className="voucher pa2 ma2 br3 tc shadow-3 grow">
-          <Link className="link" to={`/vouchers/${d.id}`}>
-            <img className="image" src={d.image} alt="logo" />
-            <h2>{d.title}</h2>
-          </Link>
-        </div>
-        <button onClick={handleDelete}>Delete</button>
-      </div>
+      <AdminInterface
+        title={d.title}
+        price={d.price}
+        description={d.description}
+        image={d.image}
+        id={d._id}
+        key={d._id}
+      />
     );
   });
+
+  return (
+    <div>
+      <div className="search" style={{display:"flex", justifyContent:"space-between", padding:"2rem"}}>
+        <form action="/">
+          <input type="search" className="navsearch" placeholder="Search" />
+        </form> 
+        <div>
+        <Link to="/addVoucher" className="btn btn-primary">Add Voucher</Link>
+        <Link to="/addVoucher" className="btn btn-primary" style={{marginLeft:"1rem"}}>Add Promo</Link>
+        </div>
+      </div>
+      <div className="voucher-content">{handleData}</div>
+    </div>
+  );
 };
 
 export default Admin;

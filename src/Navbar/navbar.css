@@ -50,3 +50,20 @@
   width: 40px;
   border: 0px;
 }
+
+.cart {
+  cursor: pointer;
+}
+.cart span:nth-child(1) {
+  font-size: 2rem;
+  color: white;
+}
+.cart span:nth-child(2) {
+  padding: 0 3px;
+  background-color: red;
+  color: white;
+  font-weight: bolx;
+  border-radius: 5px;
+  position: relative;
+  top: -15px;
+}
