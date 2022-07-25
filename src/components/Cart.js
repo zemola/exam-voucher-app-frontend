@@ -48,8 +48,9 @@ const Cart = ({ cart, setCart, handleChange }) => {
       ))}
       <div className="total">
         <span>Total Price of your Cart</span>
-        <span>N - {price}</span>
+        <span>N {price}</span>
       </div>
+      <button style={{padding:"0.5rem", margin:"1rem 0",}}>Make Payment</button>
     </article>
   );
 };
