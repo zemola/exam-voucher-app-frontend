@@ -16,14 +16,19 @@ const Cart = ({ cart, setCart, handleChange }) => {
     handlePrice();
   };
 
+  // const handlePrice = () => {
+  //   let ans = 0;
+  //   cart.map((item) => (ans += item.amount * item.price));
+  //   setPrice(ans);
+  // };
+
   const handlePrice = () => {
-    let ans = 0;
-    cart.map((item) => (ans += item.amount * item.price));
+    const ans = cart.reduce((total, item) => total + item.price, 0 );
     setPrice(ans);
   };
 
   useEffect(() => {
-    // localStorage.setItem('items',JSON.stringify(items))
+    console.log(JSON.parse(localStorage.getItem('cart')))
     handlePrice();
   });
 
