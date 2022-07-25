@@ -18,7 +18,7 @@ const Cart = ({ cart, setCart, handleChange }) => {
 
   const handlePrice = () => {
     let ans = 0;
-    cart.map((item) => (ans += item.amount * item.price));
+    cart.map((item) => );
     setPrice(ans);
   };
 

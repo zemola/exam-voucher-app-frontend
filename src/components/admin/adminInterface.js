@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 const AdminInterface = (props) => {
 
@@ -6,6 +6,8 @@ const AdminInterface = (props) => {
     fetch('http://localhost:8080/api/v1/voucher/'+ props.id, {
       method: 'DELETE'
     })
+    alert("Item deleted successfully")
+
   }
 
   return (
@@ -15,8 +17,8 @@ const AdminInterface = (props) => {
             <h6>{props.title}</h6>
             {/* <p>N{props.price}</p> */}
             {/* <p>{props.description}</p> */}
-            <button onClick={handleDelete}>Delete</button>
             </Link>
+            <button onClick={handleDelete}>Delete</button>
     </div> );
 }
  
