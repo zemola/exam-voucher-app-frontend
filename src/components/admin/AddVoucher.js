@@ -19,10 +19,14 @@ const AddVoucher = () => {
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(Voucher)
     }).then(() => {
-      console.log("new log added");
     })
 
-   
+     setTitle('');
+     setPrice('');
+     setDescription('')
+     setImage('')
+
+     alert("Your file is being uploaded!")
   }
 
 
@@ -69,11 +73,8 @@ return (
                   onChange={(e) => setImage(e.target.value)}
                 />
           </div>
-
-          {/* <button className="btn">Add Voucher</button> */}
+          <button className="btn">Add Voucher</button>
         </form>
-
-        <a className="btn" href="#">Add Voucher</a>
 
       </div>
       

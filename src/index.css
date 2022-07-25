@@ -24,9 +24,15 @@ code {
   width: 40px;
 }
 
+.image {
+  border: none;
+  margin-top: 0.5rem;
+}
+
 .voucher-content {
+  text-align: center;
   display: grid;
   grid-template-columns: auto auto auto auto;
-  width: 300px;
-  margin: 2rem 10rem;
+  margin: 2rem;
+  align-items: center;
 }

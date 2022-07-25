@@ -8,6 +8,7 @@
 }
 
 img {
+  border: 0;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
@@ -18,4 +19,13 @@ img {
 .link {
   text-decoration: none;
   color: rgb(25, 25, 44);
+}
+
+.voucher-text {
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+  color: rgb(47, 43, 66);
 }

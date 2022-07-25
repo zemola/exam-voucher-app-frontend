@@ -3,11 +3,11 @@ import "./cart.css";
 
 const Cart = ({ cart, setCart, handleChange }) => {
   const [price, setPrice] = useState(0);
-  const [items, setItems] = useState([cart])
+  // const [items, setItems] = useState([cart])
 
-  localStorage.setItem('cart', JSON.stringify([cart]));
+  // localStorage.setItem('cart', JSON.stringify([cart]));
 
-  cart = JSON.parse(localStorage.getItem([cart]));
+  // cart = JSON.parse(localStorage.getItem([cart]));
 
 
   const handleRemove = (id) => {
@@ -23,7 +23,7 @@ const Cart = ({ cart, setCart, handleChange }) => {
   };
 
   useEffect(() => {
-    localStorage.setItem('items',JSON.stringify(items))
+    // localStorage.setItem('items',JSON.stringify(items))
     handlePrice();
   });
 
