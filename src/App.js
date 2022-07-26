@@ -1,4 +1,8 @@
 import React from "react";
+
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { useState } from "react";
 import Admin from "./components/admin/admin";
@@ -10,6 +14,7 @@ import Navbar from './Navbar/navbar';
 import Footer from './Footer/footer';
 import 'tachyons';
 import Home from "./components/Home";
+
 
 
  
@@ -44,11 +49,17 @@ function App() {
       <Route path="/" element= {<Home />} />
       <Route path="/create" element= {<Admin/>} />
       <Route path="/addvoucher" element= {<AddVoucher/>} />
-      <Route path="/vouchers/:id" element= {<VoucherDetails handleClick={handleClick} />} />
+      {/* <Route path="/vouchers/:id" element= {<VoucherDetails handleClick={handleClick} />} /> */}
+      <Route path="/vouchers/:id" element= {<VoucherDetails/>} />
       <Route path="/vouchers/delete" element= {<DeleteVoucher  />} />
       <Route path="/cart" element= {<Cart cart={cart} setCart={setCart} handleChange={handleChange} />} />
       </Routes>
+      
+      <ToastContainer/>
+
       <Footer />
+
+      
       
     </div>
     </Router>

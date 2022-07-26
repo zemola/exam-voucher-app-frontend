@@ -22,6 +22,10 @@ const Cart = ({ cart, setCart, handleChange }) => {
   //   setPrice(ans);
   // };
 
+  // <button onClick={notify}>Delete</button>
+  // const notify = () => toast ("Itemhave been deleted!");
+
+
   const handlePrice = () => {
     const ans = cart.reduce((total, item) => total + item.price, 0 );
     setPrice(ans);
