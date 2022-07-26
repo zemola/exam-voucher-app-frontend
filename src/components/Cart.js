@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./cart.css";
 
 const Cart = ({ cart, setCart, handleChange }) => {
+  const localData = (JSON.parse(localStorage.getItem('cart')))
   const [price, setPrice] = useState(0);
   // const [items, setItems] = useState([cart])
 
@@ -9,6 +10,7 @@ const Cart = ({ cart, setCart, handleChange }) => {
 
   // cart = JSON.parse(localStorage.getItem([cart]));
 
+  
 
   const handleRemove = (id) => {
     const arr = cart.filter((item) => item.id !== id);
@@ -16,20 +18,24 @@ const Cart = ({ cart, setCart, handleChange }) => {
     handlePrice();
   };
 
+  // const handlePrice = () => {
+  //   let ans = 0;
+  //   cart.map((item) => (ans += item.amount * item.price));
+  //   setPrice(ans);
+  // };
+
   const handlePrice = () => {
-    let ans = 0;
-    cart.map((item) => );
+    const ans = cart.reduce((total, item) => total + item.price, 0 );
     setPrice(ans);
   };
 
   useEffect(() => {
-    // localStorage.setItem('items',JSON.stringify(items))
     handlePrice();
   });
 
   return (
     <article>
-      {cart.map((item) => (
+      {localData.map((item) => (
         <div className="cart_box" key={item.id}>
           <div className="cart_img">
             <img src={item.image} alt="" />

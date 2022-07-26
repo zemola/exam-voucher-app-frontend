@@ -22,7 +22,9 @@ function App() {
 
   const handleClick = (data) => {
     if (cart.indexOf(data) !== -1) return;
+
     setCart([...cart, data]);
+    localStorage.setItem('cart', JSON.stringify([...cart, data]));
   };
 
   const handleChange = (data, d) => {

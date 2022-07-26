@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import './voucherDetails.css'
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Button } from "style-components";
+// import { Button } from "style-components";
 
 const VoucherDetails = ({ handleClick }) => {
 
