@@ -7,10 +7,17 @@ import ContactUs from '../ContactUs/contact';
 const Home = () => {
   return ( 
     <div>
+      <div id="home">
       <HomePage />
+      </div>
       <Promo />
+      <div id="services">
       <VoucherList />
+      </div>
+      <div id="contact">
       <ContactUs />
+      </div>
+      
     </div>
    );
 }

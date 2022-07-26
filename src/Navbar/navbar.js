@@ -1,6 +1,7 @@
 import './navbar.css'
 import shopping from "../components/shopping-cart.png"
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 
 const Navbar = ({ setShow, size }) => {
@@ -10,10 +11,10 @@ const Navbar = ({ setShow, size }) => {
             <a href="/" className="logo">ExamApp <i class="fas fa-award"></i> </a>
            
             <div className="links">
-                <a href="/">Home</a>
-				<a href="/about">About Us</a>
-				<a href="/services">Services</a>
-				<a href="/contact">Contact Us</a>
+                <HashLink activeClass="active" to="/#home" spy={true} smooth={true} offset={50} duration={500}>Home</HashLink>
+                <HashLink activeClass="active" to="/#about" spy={true} smooth={true} offset={50} duration={500}>About</HashLink>
+                <HashLink activeClass="active" to="/#services" spy={true} smooth={true} offset={50} duration={500}>Services</HashLink>
+                <HashLink activeClass="active" to="/#contact" spy={true} smooth={true} offset={50} duration={500}>Contact Us</HashLink>
             </div>
 
             <div className="search">

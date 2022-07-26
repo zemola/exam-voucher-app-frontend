@@ -2,7 +2,13 @@ import React from "react";
 import { useState } from "react";
 import './AddVoucher.css'
 
+import { toast } from 'react-toastify';
+
+
 const AddVoucher = () => {
+
+  const notify = () => toast ("Successful Add to Cart!");
+
   const [title, setTitle] = useState('');
   const [price, setPrice] = useState('');
   const [description, setDescription] = useState('');
@@ -26,7 +32,8 @@ const AddVoucher = () => {
      setDescription('')
      setImage('')
 
-     alert("Your file is being uploaded!")
+    //  alert("Your file is being uploaded!")
+
   }
 
 
@@ -73,12 +80,10 @@ return (
                   onChange={(e) => setImage(e.target.value)}
                 />
           </div>
-          <button className="btn">Add Voucher</button>
+          <button onClick={notify} className="btn">Add Voucher</button>
         </form>
 
       </div>
-      
-      
     </div>
   </div>
  );

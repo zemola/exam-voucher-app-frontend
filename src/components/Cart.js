@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./cart.css";
 
-const Cart = ({ cart, setCart, handleChange }) => {
+const Cart = ({ cart, setCart, handleChange, handlePrice, price }) => {
   const localData = (JSON.parse(localStorage.getItem('cart')))
-  const [price, setPrice] = useState(0);
   // const [items, setItems] = useState([cart])
 
   // localStorage.setItem('cart', JSON.stringify([cart]));
@@ -24,10 +24,14 @@ const Cart = ({ cart, setCart, handleChange }) => {
   //   setPrice(ans);
   // };
 
-  const handlePrice = () => {
-    const ans = cart.reduce((total, item) => total + item.price, 0 );
-    setPrice(ans);
-  };
+  // <button onClick={notify}>Delete</button>
+  // const notify = () => toast ("Itemhave been deleted!");
+
+
+  // const handlePrice = () => {
+  //   const ans = cart.reduce((total, item) => total + item.price, 0 );
+  //   setPrice(ans);
+  // };
 
   useEffect(() => {
     handlePrice();
@@ -56,7 +60,8 @@ const Cart = ({ cart, setCart, handleChange }) => {
         <span>Total Price of your Cart</span>
         <span>N {price}</span>
       </div>
-      <button style={{padding:"0.5rem", margin:"1rem 0",}}>Make Payment</button>
+      <Link to="/payment"><button style={{padding:"0.5rem", margin:"1rem 0",}}>Make Payment</button></Link>
+      
     </article>
   );
 };
